@@ -1,0 +1,27 @@
+@baseUrl = http://localhost:8080/api
+### Create department
+POST {{baseUrl}}/departments
+Content-Type: application/json
+
+{"name":"Engineering","description":"Product development team"}
+
+### Create role
+POST {{baseUrl}}/roles
+Content-Type: application/json
+
+{"name":"Developer","description":"Builds and maintains software"}
+
+### List departments
+GET {{baseUrl}}/departments
+
+### List roles
+GET {{baseUrl}}/roles
+
+### Create employee (change departmentId/roleIds if your IDs differ)
+POST {{baseUrl}}/employees
+Content-Type: application/json
+
+{"firstName":"Asha","lastName":"Kumar","email":"asha.kumar@example.com","phone":"9876543210","joiningDate":"2025-05-01","departmentId":1,"roleIds":[1]}
+
+### List employees
+GET {{baseUrl}}/employees
